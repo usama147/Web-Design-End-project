@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel= "stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { box-sizing: border-box;
+        font-family: sans-serif;
+        background-color: #373742;
+ }
+
+.user-card, img {
+  box-shadow: 0px 2px 5px 0 rgba(3, 221, 250, 0.5);
+}
+
+.user-card {
+  margin: 8px;
+  padding: 20px;
+  border-radius: 2px;
+  width: 200px;
+  text-align: center;
+  float: left;
+}
+
+img {
+  border-radius: 100px;
+  height: 100px;
+  width: 100px;
+  border: 5px solid rgb(16, 75, 85);
+}
+
+.info {
+  font-family: sans-serif;
+}
+
+.name {
+  font-family: sans-serif;
+  font-size: 24px;
+  margin: 15px;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(60, 222, 243);
+}
+
+.progress {
+  color: #25af53;
+  font-size: 48px;
+}
+.heading{text-transform: uppercase;
+        font-size: 3.5rem;
+        letter-spacing: 3px;
+        margin-right: 3px;
+        margin-bottom: 5rem;
+        text-align: center;
+        color:rgb(17, 18, 22);
+        position: relative;
+        font-family: sans-serif;
+        text-shadow: 2px 2px rgb(15, 229, 236);
+}
+.fa {color: #44bbff;
+            margin-right: 16px;}
+.skill-bar{
+            background-color: skyblue;
+            border-radius: 16px;
+            font-family: sans-serif;
+        }
+        .progress-bar{
+            padding: 0.1em 16px;
+            border-radius: 16px;
+            text-align: center;
+            color: #fff;
+            background-color: #4b4fe2;
+        }
+        .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: rgb(7, 132, 250);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #293df0;
+  color: white;
+}
+/* The Modal (background) */
+.modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #434a5a;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid rgb(34, 216, 230);
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #161414;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: rgb(255, 0, 0);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 2px solid #ccc;
+      box-sizing: border-box;
+    }
+    /* set a style for all buttons*/
+
+    .signupbtn {
+      background-color: Green;
+      color: white;
+      padding: 15px 20px;
+      margin: 8px 0;
+      cursor: pointer;
+      width: 50%;
+      float: left;
+    }
+    /*set styles for the cancel button*/
+
+    .cancelbtn {
+      padding: 15px 20px;
+      background-color: #ff2e00;
+    }
+    /*float cancel and signup buttons and add an equal width*/
+
+    .cancelbtn,
+    .signupbtn {
+      float: left;
+      width: 50%;
+    }
+    /*add padding to container elements*/
+
+    .container {
+      padding: 16px;
+    }
+    /*clear floats*/
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    /*styles for cancel button and signup button  
+      on extra small screens*/
+
+    @media screen and (max-width: 300px) {
+      .cancelbtn,
+      .signupbtn {
+        width: 100%;
+      }
+    }
+        
+    </style>
+    <title>Usama Gierdien &#x1F919;</title>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="https://www.google.com/search?q=random+images&rlz=1C1JZAP_enZA890ZA890&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjdno2e8MnoAhXGzYUKHT1cD8oQ_AUoAXoECA4QAw&biw=1536&bih=760" target="blank">Click here if you want &#x1F643;</a>
+      </div>
+    <h1 class="heading"><u>User Profiles</u></h1>
+    <hr color="Blue">
+    <hr>
+    <button class="myBtn_multi">Sign Up &#x1F4C4;</button>
+
+         <!-- The Modal -->
+         <div class="modal modal_multi">
+     
+             <!-- Modal content -->
+             <div class="modal-content">
+                 <span class="close close_multi">×</span>
+                 <form action="/action_page.php" style="border:1px solid #ccc">
+                    <div class="container">
+                        <label><b>First Name</b></label>
+                        <input type="text" placeholder="Enter First Name" name="FirstName" required />
+                        <label><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" name="LastName" required />
+                      <label><b>Occupation</b></label>
+                      <input type="text" placeholder="Occupation" name="Occupation" required />
+                      <label><b>Location</b></label>
+                      <input type="text" placeholder="Enter Location" name="Location" required />
+                      <label><b>Cellphone Number</b></label>
+                      <input type="text" placeholder="Enter Cellphone Number" name="Cellphone Number" required />
+                      <label><b>Password</b></label>
+                      <input
+                        type="password"
+                        placeholder="Enter Password"
+                        name="psw"
+                        required
+                      />
+                      <input type="checkbox" checked="checked" /> Remember me
+                      <p>
+                        To create an account you have to agree our
+                        <a href="#">Terms & Privacy</a>.
+                      </p>
+              
+                      <div class="clearfix">
+                        <button type="button" class="cancelbtn">Cancel</button>
+                        <button type="submit" class="signupbtn">Sign Up</button>
+                      </div>
+                    </div>
+                  </form>
+             </div>
+         </div>
+         <hr>
+         <hr color="Blue" height="150px">
+    <div class="user-card">
+        <img src="mans.png">
+        <div class="info">
+          <button onclick="myFunction()"  class="btn btn-danger">Delete User.</button>
+          <div class="name">Usama G</div>
+          <hr>
+          <div class="handle"> <a href="https://codepen.io/usama147" target="blank">@Usama</a></div>
+         <hr>
+         <hr color="cyan" width="50px">
+         <button class="myBtn_multi">More Info</button>
+
+         <!-- The Modal -->
+         <div class="modal modal_multi">
+     
+             <!-- Modal content -->
+             <div class="modal-content">
+                 <span class="close close_multi">×</span>
+                 <p><b>Home Adress 🏠</b> : <u>1055 Edward Street Chatsworth</u></p>
+    <p><b>Next of kin 👨‍❤️‍💋‍👨</b>: <u>Kauthar Gierdien</u></p>
+    <p><b>Next of kin 👨‍❤️‍💋‍👨 Relationship status </b>: <u>Wife</u></p>
+    <p><b>Next of kin 👨‍❤️‍💋‍👨 cell and e-mail</b> : <u>071 424 4528, kautharmaker21@gmail.com</u> </p>
+             </div>
+         </div>
+         <hr color="cyan" width="50px">
+         <hr>
+          <p><i class="fa fa-briefcase" aria-hidden="true"></i></i>Web Developer</p>
+          <hr>
+          <p><i class="fa fa-home" aria-hidden="true"></i> Cape town South Africa</p>
+          <hr>
+          <p><i class="fa fa-envelope" aria-hidden="true"></i> Uzzi15@gmail.com</p>
+          <hr>
+          <p><i class="fa fa-phone" aria-hidden="true"></i> 089 567 3421</p>
+        </div>
+        <hr>
+        <p><b><i class="fa fa-star" aria-hidden="true"></i>Skills</b></p>
+        <hr>
+        <div class="dropdown">
+        
+        <p>Visual Studio Code.</p>
+        <div class="skill-bar">
+            <div class="progress-bar" style="width : 80%">
+            80%
+        </div>
+        </div>
+        <p>Python.</p>
+        <div class="skill-bar">
+            <div class="progress-bar" style="width : 75%">
+            75%
+        </div>
+        </div>
+        <p>Word Processing</p>
+        <div class="skill-bar">
+            <div class="progress-bar" style="width : 85%">
+            85%
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      <div class="user-card">
+        <img src="mans.png">
+        <div class="info">
+          <button onclick="myFunction()">Delete User.</button>
+          <div class="name">Jaabir Esau</div>
+          <hr>
+          <div class="handle">
+            <a href="">@Jaabir</a>
+          </div>
+          <hr>
+          <hr color="cyan" width="50px">
+          <button class="myBtn_multi">More Info</button>
+          <div  class="modal modal_multi">
+             <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close close_multi">×</span>
+                <p><b>Home Adress 🏠</b> : <u>65 Winter Cresent</u></p>
+                <p><b>Next of kin 👨‍❤️‍💋‍👨</b>: <u>Fatiema Esau</u></p>
+                <p><b>Next of kin 👨‍❤️‍💋‍👨 Relationship status </b>: <u>Wife</u></p>
+                <p><b>Next of kin 👨‍❤️‍💋‍👨 cell and e-mail</b> : <u>063 124 5643 , fatiemaesau12@gmail.com</u> </p>
+            </div>
+    
+        </div>
+        <hr color="cyan" width="50px">
+        <hr>
+          <p><i class="fa fa-briefcase" aria-hidden="true"></i></i>Front End Developer</p>
+          <hr>
+          <p><i class="fa fa-home" aria-hidden="true"></i> Cape town South Africa</p>
+          <hr>
+          <p><i class="fa fa-envelope" aria-hidden="true"></i> blokboi98@gmail.com</p>
+          <hr>
+          <p><i class="fa fa-phone" aria-hidden="true"></i> 067 222 0921</p>
+          <hr>
+          <p><b><i class="fa fa-star" aria-hidden="true"></i>Skills</b></p>
+          <hr>
+          <p>Visual Studio Code.</p>
+          <div class="skill-bar">
+              <div class="progress-bar" style="width : 67%">
+              67%
+          </div>
+          </div>
+          <p>Python.</p>
+          <div class="skill-bar">
+              <div class="progress-bar" style="width : 75%">
+              75%
+          </div>
+          </div>
+          <p>Word Processing</p>
+          <div class="skill-bar">
+              <div class="progress-bar" style="width : 85%">
+              85%
+          </div>
+            </div>
+          </div>
+        </div>
+         
+          
+        <div class="user-card">
+            <img src="mans.png">
+            <div class="info">
+              <button onclick="myFunction()" class="btn btn-danger">Delete User.</button>
+              <div class="name">Jason Wandrag</div>
+              <hr>
+              <div class="handle"> <a href="" target="blank">@Jason</a></div>
+              <hr>
+              <hr color="cyan" width="50px">
+              <button class="myBtn_multi">More Info</button>
+              <div  class="modal modal_multi">
+                 <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close close_multi">×</span>
+                    <p><b>Home Adress 🏠</b> : <u>38 Gamsa Street Rylands</u></p>
+                    <p><b>Next of kin 👨‍❤️‍💋‍👨</b>: <u>Alexa Wandrag</u></p>
+                    <p><b>Next of kin 👨‍❤️‍💋‍👨 Relationship status </b>: <u>Wife</u></p>
+                    <p><b>Next of kin 👨‍❤️‍💋‍👨 cell and e-mail</b> : <u>043 024 5223 , alexawan2@gmail.com</u> </p>
+                </div>
+              </div>
+              <hr color="cyan" width="50px">
+              <hr>
+              <p><i class="fa fa-briefcase" aria-hidden="true"></i></i>Full Stack Developer</p>
+              <hr>
+              <p><i class="fa fa-home" aria-hidden="true"></i> Cape town South Africa</p>
+              <hr>
+              <p><i class="fa fa-envelope" aria-hidden="true"></i> TheboyJ@gmail.com</p>
+              <hr>
+              <p><i class="fa fa-phone" aria-hidden="true"></i> 054 087 3456</p>
+            </div>
+            <hr>
+            <p><b><i class="fa fa-star" aria-hidden="true"></i>Skills</b></p>
+            <hr>
+            <p>Visual Studio Code.</p>
+            <div class="skill-bar">
+                <div class="progress-bar" style="width : 89%">
+                    <i class="fa fa-star" aria-hidden="true"></i>99%
+            </div>
+            </div>
+            <p>Python.</p>
+            <div class="skill-bar">
+                <div class="progress-bar" style="width : 75%">
+                75%
+            </div>
+            </div>
+            <p>Word Processing</p>
+            <div class="skill-bar">
+                <div class="progress-bar" style="width : 89%">
+                    <i class="fa fa-star" aria-hidden="true"></i>99%
+            </div>
+              </div>
+            </div>
+          </div>
+          <div class="user-card">
+            <img src="mans.png">
+            <div class="info">
+              <button onclick="myFunction()"  class="btn btn-danger">Delete User.</button>
+              <div class="name">Zubair De Vries</div>
+              <hr>
+              <div class="handle"> <a href="" target="blank">@Zubair</a></div>
+              <hr>
+              <hr color="cyan" width="50px">
+              <button class="myBtn_multi">More Info</button>
+              <div  class="modal modal_multi">
+                 <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close close_multi">×</span>
+                    <p><b>Home Adress 🏠</b> : <u>2 Archer ave</u></p>
+                    <p><b>Next of kin 👨‍❤️‍💋‍👨</b>: <u>Laeeqah De Vries</u></p>
+                    <p><b>Next of kin 👨‍❤️‍💋‍👨 Relationship status </b>: <u>Wife</u></p>
+                    <p><b>Next of kin 👨‍❤️‍💋‍👨 cell and e-mail</b> : <u>083 055 4329 , eeqah786@gmail.com</u> </p>
+                </div>
+              </div>
+              <hr color="cyan" width="50px">
+              <hr>
+              <p><i class="fa fa-briefcase" aria-hidden="true"></i></i>Web Developer</p>
+              <hr>
+              <p><i class="fa fa-home" aria-hidden="true"></i> Cape town South Africa</p>
+              <hr>
+              <p><i class="fa fa-envelope" aria-hidden="true"></i>zubair0015@gmail.com</p>
+              <hr>
+              <p><i class="fa fa-phone" aria-hidden="true"></i> 022 013 3433</p>
+            </div>
+            <hr>
+            <p><b><i class="fa fa-star" aria-hidden="true"></i>Skills</b></p>
+            <hr>
+            <div class="dropdown">
+            
+            <p>Visual Studio Code.</p>
+            <div class="skill-bar">
+                <div class="progress-bar" style="width : 70%">
+                70%
+            </div>
+            </div>
+            <p>Python.</p>
+            <div class="skill-bar">
+                <div class="progress-bar" style="width : 77%">
+                77%
+            </div>
+            </div>
+            <p>Word Processing</p>
+            <div class="skill-bar">
+                <div class="progress-bar" style="width : 75%">
+                75%
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          <script>
+            function myFunction() {
+  confirm("Delete this User?");
+}
+ // Get the modal
+
+ var modalparent = document.getElementsByClassName("modal_multi");
+
+// Get the button that opens the modal
+
+var modal_btn_multi = document.getElementsByClassName("myBtn_multi");
+
+// Get the <span> element that closes the modal
+var span_close_multi = document.getElementsByClassName("close_multi");
+
+// When the user clicks the button, open the modal
+function setDataIndex() {
+
+    for (i = 0; i < modal_btn_multi.length; i++)
+    {
+        modal_btn_multi[i].setAttribute('data-index', i);
+        modalparent[i].setAttribute('data-index', i);
+        span_close_multi[i].setAttribute('data-index', i);
+    }
+}
+
+
+
+for (i = 0; i < modal_btn_multi.length; i++)
+{
+    modal_btn_multi[i].onclick = function() {
+        var ElementIndex = this.getAttribute('data-index');
+        modalparent[ElementIndex].style.display = "block";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    span_close_multi[i].onclick = function() {
+        var ElementIndex = this.getAttribute('data-index');
+        modalparent[ElementIndex].style.display = "none";
+    };
+
+}
+
+window.onload = function() {
+
+    setDataIndex();
+};
+
+window.onclick = function(event) {
+    if (event.target === modalparent[event.target.getAttribute('data-index')]) {
+        modalparent[event.target.getAttribute('data-index')].style.display = "none";
+    }
+
+    // OLD CODE
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+
+//XXXXXXXXXXXXXXXXXXXXXXX    Modified old code    XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+// Get the modal
+
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = modal.getElementsByClassName("close")[0]; // Modified by dsones uk
+
+// When the user clicks on the button, open the modal
+
+btn.onclick = function() {
+
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+          </script>
+</body>
+</html>
